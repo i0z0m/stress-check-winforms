@@ -41,7 +41,7 @@
             // 
             // buttonChoice4
             // 
-            this.buttonChoice4.Location = new System.Drawing.Point(328, 138);
+            this.buttonChoice4.Location = new System.Drawing.Point(340, 221);
             this.buttonChoice4.Name = "buttonChoice4";
             this.buttonChoice4.Size = new System.Drawing.Size(67, 44);
             this.buttonChoice4.TabIndex = 20;
@@ -51,7 +51,7 @@
             // 
             // buttonChoice3
             // 
-            this.buttonChoice3.Location = new System.Drawing.Point(256, 138);
+            this.buttonChoice3.Location = new System.Drawing.Point(266, 221);
             this.buttonChoice3.Name = "buttonChoice3";
             this.buttonChoice3.Size = new System.Drawing.Size(66, 44);
             this.buttonChoice3.TabIndex = 19;
@@ -61,7 +61,7 @@
             // 
             // buttonChoice2
             // 
-            this.buttonChoice2.Location = new System.Drawing.Point(186, 138);
+            this.buttonChoice2.Location = new System.Drawing.Point(196, 221);
             this.buttonChoice2.Name = "buttonChoice2";
             this.buttonChoice2.Size = new System.Drawing.Size(64, 44);
             this.buttonChoice2.TabIndex = 18;
@@ -71,7 +71,7 @@
             // 
             // buttonChoice1
             // 
-            this.buttonChoice1.Location = new System.Drawing.Point(111, 138);
+            this.buttonChoice1.Location = new System.Drawing.Point(121, 221);
             this.buttonChoice1.Name = "buttonChoice1";
             this.buttonChoice1.Size = new System.Drawing.Size(69, 44);
             this.buttonChoice1.TabIndex = 17;
@@ -82,7 +82,7 @@
             // labelQuestion
             // 
             this.labelQuestion.AutoSize = true;
-            this.labelQuestion.Location = new System.Drawing.Point(207, 59);
+            this.labelQuestion.Location = new System.Drawing.Point(193, 131);
             this.labelQuestion.Name = "labelQuestion";
             this.labelQuestion.Size = new System.Drawing.Size(43, 13);
             this.labelQuestion.TabIndex = 21;
@@ -91,7 +91,7 @@
             // labelSection
             // 
             this.labelSection.AutoSize = true;
-            this.labelSection.Location = new System.Drawing.Point(111, 59);
+            this.labelSection.Location = new System.Drawing.Point(118, 55);
             this.labelSection.Name = "labelSection";
             this.labelSection.Size = new System.Drawing.Size(50, 13);
             this.labelSection.TabIndex = 22;
@@ -100,7 +100,7 @@
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(167, 59);
+            this.labelID.Location = new System.Drawing.Point(376, 55);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(31, 13);
             this.labelID.TabIndex = 23;
@@ -108,7 +108,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 267);
+            this.button1.Location = new System.Drawing.Point(196, 312);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 44);
             this.button1.TabIndex = 24;
@@ -117,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(256, 267);
+            this.button2.Location = new System.Drawing.Point(266, 312);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 44);
             this.button2.TabIndex = 25;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.buttonChoice2);
             this.Controls.Add(this.buttonChoice1);
             this.Name = "UserControl3";
-            this.Size = new System.Drawing.Size(704, 430);
+            this.Size = new System.Drawing.Size(544, 430);
             this.Load += new System.EventHandler(this.UserControl3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
