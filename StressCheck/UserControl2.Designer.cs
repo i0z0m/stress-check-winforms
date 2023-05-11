@@ -31,6 +31,8 @@
             this.labelSectionD = new System.Windows.Forms.Label();
             this.labelSectionN = new System.Windows.Forms.Label();
             this.buttonNext = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelSectionD
@@ -55,7 +57,7 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(142, 242);
+            this.buttonNext.Location = new System.Drawing.Point(112, 216);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(88, 32);
             this.buttonNext.TabIndex = 8;
@@ -63,10 +65,30 @@
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(214, 275);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 44);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "ひとつ前の画面";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(144, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 44);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "タイトル画面に戻る";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSectionD);
             this.Controls.Add(this.labelSectionN);
             this.Controls.Add(this.buttonNext);
@@ -83,5 +105,7 @@
         private System.Windows.Forms.Label labelSectionD;
         private System.Windows.Forms.Label labelSectionN;
         private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

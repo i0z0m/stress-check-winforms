@@ -35,6 +35,8 @@
             this.labelQuestion = new System.Windows.Forms.Label();
             this.labelSection = new System.Windows.Forms.Label();
             this.labelID = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonChoice4
@@ -104,10 +106,30 @@
             this.labelID.TabIndex = 23;
             this.labelID.Text = "番号";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(186, 267);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 44);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "タイトル画面に戻る";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(256, 267);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 44);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "ひとつ前の画面";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // UserControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.labelSection);
             this.Controls.Add(this.labelQuestion);
@@ -131,5 +153,7 @@
         private System.Windows.Forms.Label labelQuestion;
         private System.Windows.Forms.Label labelSection;
         private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
