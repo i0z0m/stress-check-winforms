@@ -45,12 +45,14 @@ namespace StressCheck
             currentSection = sectionList[currentSectionIndex];
 
             // Questionを作成
-            Question question1 = new Question(1, "非常にたくさんの仕事をしなければならない", 0, true);
-            Question question2 = new Question(2, "時間内に仕事が処理しきれない", 0, true);
+            Question sectionA_question1 = new Question(1, "非常にたくさんの仕事をしなければならない", 0, true);
+            Question sectionA_question2 = new Question(2, "時間内に仕事が処理しきれない", 0, true);
+            Question sectionB_question1 = new Question(1, "活気がわいてくる", 0, true);
 
             // SectionにQuestionを追加
-            sectionA.Questions.Add(question1);
-            sectionA.Questions.Add(question2);
+            sectionA.Questions.Add(sectionA_question1);
+            sectionA.Questions.Add(sectionA_question2);
+            sectionB.Questions.Add(sectionB_question1);
 
             // sectionListに含まれるすべてのQuestionをquestionListに追加
             foreach (Section section in sectionList)
