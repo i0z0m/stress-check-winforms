@@ -1,4 +1,5 @@
-﻿using StressCheck.ScreenTransition;
+﻿using static StressCheck.Employee;
+using StressCheck.ScreenTransition;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,18 +21,7 @@ namespace StressCheck
             InitializeComponent(); 
         }
 
-        public class Employee
-        {
-            public Gender Gender { get; set; }
-        }
         private Employee employee = new Employee();
-
-        // 列挙型のGenderクラスを定義
-        public enum Gender
-        {
-            MALE,
-            FEMALE
-        }
 
         private void buttonMale_Click(object sender, EventArgs e)
         {
