@@ -46,6 +46,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "mainForm";
             this.Text = "5分でできる職場のストレスセルフチェック";
             this.Load += new System.EventHandler(this.mainForm_Load);
