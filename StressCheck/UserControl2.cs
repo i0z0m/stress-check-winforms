@@ -30,7 +30,7 @@ namespace StressCheck
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateTo<UserControl3>(this);
+            NavigationHelper.NavigateTo<UserControl3>();
         }
 
         private void labelSectionD_Click(object sender, EventArgs e)

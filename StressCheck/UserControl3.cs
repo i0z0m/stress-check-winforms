@@ -100,7 +100,7 @@ namespace StressCheck
                 else
                 {
                     // 全てのセクションが終了した場合
-                    NavigationHelper.NavigateTo<UserControl4>(this);
+                    NavigationHelper.NavigateTo<UserControl4>();
                     return;
                 }
             }
@@ -112,7 +112,7 @@ namespace StressCheck
             if (currentQuestionIndex == 0)
             {
                 // 次のセクションの最初の問題に移る前に画面遷移する
-                NavigationHelper.NavigateTo<UserControl2>(this);
+                NavigationHelper.NavigateTo<UserControl2>();
             }
         }
 

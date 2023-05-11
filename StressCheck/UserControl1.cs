@@ -26,13 +26,13 @@ namespace StressCheck
         private void buttonMale_Click(object sender, EventArgs e)
         {
             employee.Gender = Gender.MALE;
-            NavigationHelper.NavigateTo<UserControl2>(this);
+            NavigationHelper.NavigateTo<UserControl2>();
         }
 
         private void buttonFemale_Click(object sender, EventArgs e)
         {
             employee.Gender = Gender.FEMALE;
-            NavigationHelper.NavigateTo<UserControl2>(this);
+            NavigationHelper.NavigateTo<UserControl2>();
         }
     }
 }
