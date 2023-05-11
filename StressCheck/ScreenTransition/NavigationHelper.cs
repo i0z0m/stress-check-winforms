@@ -8,13 +8,28 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace StressCheck.ScreenTransition
 {
-    public class NavigationHelper
+    public static class NavigationHelper
     {
-        public static void NavigateTo<T>(Control currentControl) where T : Control, new()
+        private static readonly ScreenManager ScreenManager = new ScreenManager();
+
+        public static void RegisterScreen(string name, UserControl screen)
         {
-            var targetControl = new T();
-            currentControl.Controls.Clear();
-            currentControl.Controls.Add(targetControl);
+            ScreenManager.RegisterScreen(name, screen);
+        }
+
+        public static void NavigateTo(string name, Control container)
+        {
+            ScreenManager.NavigateTo(name, container);
+        }
+
+        public static bool CanGoBack()
+        {
+            return ScreenManager.CanGoBack();
+        }
+
+        public static void GoBack(Control container)
+        {
+            ScreenManager.GoBack(container);
         }
     }
 }

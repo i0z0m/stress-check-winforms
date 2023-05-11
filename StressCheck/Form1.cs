@@ -1,5 +1,4 @@
-﻿using StressCheck.ScreenTransition;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,14 +21,16 @@ namespace StressCheck
             InitializeComponent();
         }
 
+        public Panel MainPanel
+        {
+            get { return mainPanel; }
+        }
 
         private void mainForm_Load(object sender, EventArgs e)
         {
             userControl1 = new UserControl1();
             mainPanel.Controls.Add(userControl1);
         }
-
-
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {

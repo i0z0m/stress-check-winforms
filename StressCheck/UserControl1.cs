@@ -1,5 +1,5 @@
 ﻿using static StressCheck.Employee;
-using StressCheck.ScreenTransition;
+using static StressCheck.NavigationHelper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
