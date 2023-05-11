@@ -61,12 +61,7 @@ namespace StressCheck
             }
 
             // currentQuestionを初期化
-            if (currentQuestionIndex >= 0)
-            {
-                currentQuestion = questionList[currentQuestionIndex];
-
-                //currentQuestion = sectionList[0].Questions[0];
-            }
+            currentQuestion = questionList[currentQuestionIndex];
 
             LoadQuestion(sender, e);
         }
@@ -85,23 +80,42 @@ namespace StressCheck
             buttonChoice4.Text = currentSection.Choices[3];
         }
 
-        // 「次へ」ボタンがクリックされたときの処理
         private void buttonNext_Click(object sender, EventArgs e)
         {
             // 現在表示中の問題のインデックスを1つ増やす
-            if (currentQuestionIndex < questionList.Count - 1)
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex >= currentSection.Questions.Count)
             {
-                currentQuestionIndex++;
-                currentQuestion = questionList[currentQuestionIndex];
-                LoadQuestion(sender, e);
+                // 現在のセクションが終了した場合
+                currentSectionIndex++;
+
+                if (currentSectionIndex < sectionList.Count)
+                {
+                    // 次のセクションがある場合
+                    currentSection = sectionList[currentSectionIndex];
+                    labelSection.Text = currentSection.Name;
+                    currentQuestionIndex = 0;
+                }
+                else
+                {
+                    // 全てのセクションが終了した場合
+                    NavigationHelper.NavigateTo<UserControl4>(this);
+                    return;
+                }
             }
-            else 
+
+            // 次の問題を表示する
+            currentQuestion = currentSection.Questions[currentQuestionIndex];
+            LoadQuestion(sender, e);
+
+            if (currentQuestionIndex == 0)
             {
-                NavigationHelper.NavigateTo<UserControl4>(this);
+                // 次のセクションの最初の問題に移る前に画面遷移する
+                NavigationHelper.NavigateTo<UserControl2>(this);
             }
         }
 
-        
         private void buttonChoice1_Click(object sender, EventArgs e)
         {
             questionList[currentQuestionIndex].Score = 1;
