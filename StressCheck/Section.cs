@@ -12,6 +12,27 @@ namespace StressCheck
         public string Description { get; set; }
         public List<Question> Questions { get; set; }
         public List<string> Choices { get; set; }
+        public int TotalScore
+        {
+            get
+            {
+                int totalScore = 0;
+
+                foreach (Question question in Questions)
+                {
+                    if (question.Reverse)
+                    {
+                        totalScore += (Choices.Count - question.Score + 1);
+                    }
+                    else
+                    {
+                        totalScore += question.Score;
+                    }
+                }
+
+                return totalScore;
+            }
+        }
 
         public Section(string name, string description)
         {

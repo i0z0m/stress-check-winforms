@@ -1,4 +1,5 @@
 ﻿using static StressCheck.NavigationHelper;
+using static StressCheck.Section;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,8 @@ namespace StressCheck
         private Question currentQuestion;
         private int currentQuestionIndexInSection = 0;
         private List<Question> questionList = new List<Question>();
+
+        private List<int> totalScores = new List<int>();
 
         private void UserControl3_Load(object sender, EventArgs e)
         {
@@ -76,9 +79,12 @@ namespace StressCheck
             currentSection = sectionList[currentSectionIndex];
 
             // sectionListに含まれるすべてのQuestionをquestionListに追加
+            // ついでにsectionごとのTotalScoreを求める
             foreach (Section section in sectionList)
             {
                 questionList.AddRange(section.Questions);
+                int totalScore = section.TotalScore;
+                totalScores.Add(totalScore);
             }
 
             // currentQuestionを初期化
@@ -117,12 +123,12 @@ namespace StressCheck
 
                     // 次のセクションの最初の問題に移る前に画面遷移する
 //                    Console.WriteLine("currentSection before transition: " + currentSection.Name); // テスト
-                    NavigationHelper.NavigateTo<UserControl2>(currentSection);
+//                    NavigationHelper.NavigateTo<UserControl2>(currentSection);
                 }
                 else
                 {
                     // 全てのセクションが終了した場合
-                    NavigationHelper.NavigateTo<UserControl4>();
+                    NavigationHelper.NavigateTo<UserControl4>(totalScores);
                     return;
                 }
             }
