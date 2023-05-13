@@ -16,7 +16,6 @@ namespace StressCheck
         public UserControl3()
         {
             InitializeComponent();
-
         }
 
         private Section currentSection;
@@ -71,6 +70,7 @@ namespace StressCheck
             // 問題文ラベルのTextプロパティに、現在表示中の問題の問題文を代入する
             labelSection.Text = currentSection.Name;
             labelID.Text = currentQuestion.ID.ToString();
+            labelCount.Text = currentSection.Questions.Count.ToString();
             labelQuestion.Text = currentQuestion.Text;
 
             // 選択肢ボタンのテキストに、現在表示中の問題の選択肢を代入する
@@ -88,14 +88,16 @@ namespace StressCheck
             if (currentQuestionIndex >= currentSection.Questions.Count)
             {
                 // 現在のセクションが終了した場合
-                currentSectionIndex++;
-
-                if (currentSectionIndex < sectionList.Count)
+                if (currentSectionIndex < sectionList.Count - 1)
                 {
                     // 次のセクションがある場合
+                    currentSectionIndex++;
                     currentSection = sectionList[currentSectionIndex];
-                    labelSection.Text = currentSection.Name;
                     currentQuestionIndex = 0;
+
+                    // 次のセクションの最初の問題に移る前に画面遷移する
+//                    Console.WriteLine("currentSection before transition: " + currentSection.Name); // テスト
+//                    NavigationHelper.NavigateTo<UserControl2>(currentSection);
                 }
                 else
                 {
@@ -104,16 +106,9 @@ namespace StressCheck
                     return;
                 }
             }
-
             // 次の問題を表示する
             currentQuestion = currentSection.Questions[currentQuestionIndex];
             LoadQuestion(sender, e);
-
-            if (currentQuestionIndex == 0)
-            {
-                // 次のセクションの最初の問題に移る前に画面遷移する
-                NavigationHelper.NavigateTo<UserControl2>();
-            }
         }
 
         private void buttonChoice1_Click(object sender, EventArgs e)
@@ -155,7 +150,6 @@ namespace StressCheck
                 {
                     // 前のセクションがある場合
                     currentSection = sectionList[currentSectionIndex];
-                    labelSection.Text = currentSection.Name;
                     currentQuestionIndex = currentSection.Questions.Count - 1;
                 }
                 else

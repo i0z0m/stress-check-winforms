@@ -21,11 +21,17 @@ namespace StressCheck
             InitializeComponent();
         }
 
+        private Section currentSection;
+
         private void UserControl2_Load(object sender, EventArgs e)
         {
-            Section section = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。");
-            labelSectionN.Text = section.Name;
-            labelSectionD.Text = section.Description;
+            if (currentSection == null) // 初回表示時のみcurrentSectionを初期化
+            {
+                currentSection = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。");
+            }
+//            Console.WriteLine("currentSection in UserControl2_Load: " + currentSection.Name); // テスト
+            labelSectionN.Text = currentSection.Name;
+            labelSectionD.Text = currentSection.Description;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)

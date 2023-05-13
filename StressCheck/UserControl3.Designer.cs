@@ -37,6 +37,8 @@
             this.labelID = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonChoice4
@@ -93,18 +95,18 @@
             this.labelSection.AutoSize = true;
             this.labelSection.Location = new System.Drawing.Point(118, 55);
             this.labelSection.Name = "labelSection";
-            this.labelSection.Size = new System.Drawing.Size(50, 13);
+            this.labelSection.Size = new System.Drawing.Size(96, 13);
             this.labelSection.TabIndex = 22;
-            this.labelSection.Text = "セクション";
+            this.labelSection.Text = "現在のセクション名";
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(376, 55);
+            this.labelID.Location = new System.Drawing.Point(300, 55);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(31, 13);
+            this.labelID.Size = new System.Drawing.Size(55, 13);
             this.labelID.TabIndex = 23;
-            this.labelID.Text = "番号";
+            this.labelID.Text = "問題番号";
             // 
             // button1
             // 
@@ -126,10 +128,30 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // labelCount
+            // 
+            this.labelCount.AutoSize = true;
+            this.labelCount.Location = new System.Drawing.Point(395, 55);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(96, 13);
+            this.labelCount.TabIndex = 27;
+            this.labelCount.Text = "セクションの問題数";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(361, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(12, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "/";
+            // 
             // UserControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCount);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelID);
@@ -157,5 +179,7 @@
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label label1;
     }
 }
