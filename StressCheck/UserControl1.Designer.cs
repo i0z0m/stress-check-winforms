@@ -83,7 +83,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(615, 399);
+            this.Size = new System.Drawing.Size(600, 400);
             this.ResumeLayout(false);
             this.PerformLayout();
 
