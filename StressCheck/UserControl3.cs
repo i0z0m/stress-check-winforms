@@ -99,9 +99,27 @@ namespace StressCheck
                 }
             };
 
+            Section sectionC = new Section("C", "あなたの周りの方々についてうかがいます。最もあてはまる選択ボタンを選んでください。")
+            {
+                Choices = { "非常に", "かなり", "多少", "全くない" },
+                Questions =
+                {
+                    new Question(1, "上司", 0, false),
+                    new Question(2, "職場の同僚", 0, false),
+                    new Question(3, "配偶者、家族、友人等", 0, false),
+                    new Question(4, "上司", 0, false),
+                    new Question(5, "職場の同僚", 0, false),
+                    new Question(6, "配偶者、家族、友人等", 0, false),
+                    new Question(7, "上司", 0, false),
+                    new Question(8, "職場の同僚", 0, false),
+                    new Question(9, "配偶者、家族、友人等", 0, false),
+                }
+            };
+
             // sectionListにSectionを追加
             sectionList.Add(sectionA);
             sectionList.Add(sectionB);
+            sectionList.Add(sectionC);
 
             // currentSectionを初期化
             currentSection = sectionList[currentSectionIndex];
