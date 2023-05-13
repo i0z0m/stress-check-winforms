@@ -23,7 +23,7 @@ namespace StressCheck
         private List<Section> sectionList = new List<Section>();
 
         private Question currentQuestion;
-        private int currentQuestionIndex = 0;
+        private int currentQuestionIndexInSection = 0;
         private List<Question> questionList = new List<Question>();
 
         private void UserControl3_Load(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace StressCheck
             }
 
             // currentQuestionを初期化
-            currentQuestion = questionList[currentQuestionIndex];
+            currentQuestion = questionList[currentQuestionIndexInSection];
         }
 
         private void displayQuestions(object sender, EventArgs e)
@@ -88,9 +88,9 @@ namespace StressCheck
         private void buttonNext_Click(object sender, EventArgs e)
         {
             // 現在表示中の問題のインデックスを1つ増やす
-            currentQuestionIndex++;
+            currentQuestionIndexInSection++;
 
-            if (currentQuestionIndex >= currentSection.Questions.Count)
+            if (currentQuestionIndexInSection >= currentSection.Questions.Count)
             {
                 // 現在のセクションが終了した場合
                 if (currentSectionIndex < sectionList.Count - 1)
@@ -98,7 +98,7 @@ namespace StressCheck
                     // 次のセクションがある場合
                     currentSectionIndex++;
                     currentSection = sectionList[currentSectionIndex];
-                    currentQuestionIndex = 0;
+                    currentQuestionIndexInSection = 0;
 
                     // 次のセクションの最初の問題に移る前に画面遷移する
 //                    Console.WriteLine("currentSection before transition: " + currentSection.Name); // テスト
@@ -112,41 +112,41 @@ namespace StressCheck
                 }
             }
             // 次の問題を表示する
-            currentQuestion = currentSection.Questions[currentQuestionIndex];
+            currentQuestion = currentSection.Questions[currentQuestionIndexInSection];
             displayQuestions(sender, e);
         }
 
         private void buttonChoice1_Click(object sender, EventArgs e)
         {
-            questionList[currentQuestionIndex].Score = 1;
+            questionList[currentQuestionIndexInSection].Score = 1;
             buttonNext_Click(sender, e);
         }
 
 
         private void buttonChoice2_Click(object sender, EventArgs e)
         {
-            questionList[currentQuestionIndex].Score = 2;
+            questionList[currentQuestionIndexInSection].Score = 2;
             buttonNext_Click(sender, e);
         }
 
         private void buttonChoice3_Click(object sender, EventArgs e)
         {
-            questionList[currentQuestionIndex].Score = 3;
+            questionList[currentQuestionIndexInSection].Score = 3;
             buttonNext_Click(sender, e);
         }
 
         private void buttonChoice4_Click(object sender, EventArgs e)
         {
-            questionList[currentQuestionIndex].Score = 4;
+            questionList[currentQuestionIndexInSection].Score = 4;
             buttonNext_Click(sender, e);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             // 現在表示中の問題のインデックスを1つ減らす
-            currentQuestionIndex--;
+            currentQuestionIndexInSection--;
 
-            if (currentQuestionIndex < 0)
+            if (currentQuestionIndexInSection < 0)
             {
                 // 現在のセクションの最初の問題を表示している場合
                 currentSectionIndex--;
@@ -155,7 +155,7 @@ namespace StressCheck
                 {
                     // 前のセクションがある場合
                     currentSection = sectionList[currentSectionIndex];
-                    currentQuestionIndex = currentSection.Questions.Count - 1;
+                    currentQuestionIndexInSection = currentSection.Questions.Count - 1;
                 }
                 else
                 {
@@ -166,7 +166,7 @@ namespace StressCheck
             }
 
             // 問題を表示
-            currentQuestion = currentSection.Questions[currentQuestionIndex];
+            currentQuestion = currentSection.Questions[currentQuestionIndexInSection];
             displayQuestions(sender, e);
         }
 
