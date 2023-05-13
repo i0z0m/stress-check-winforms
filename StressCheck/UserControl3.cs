@@ -40,8 +40,23 @@ namespace StressCheck
                 Questions =
                 {
                     new Question(1, "非常にたくさんの仕事をしなければならない", 0, true),
-                    new Question(2, "時間内に仕事が処理しきれない", 0, true)
-    }
+                    new Question(2, "時間内に仕事が処理しきれない", 0, true),
+                    new Question(3, "一生懸命働かなければならない", 0, true),
+                    new Question(4, "かなり注意を集中する必要がある", 0, true),
+                    new Question(5, "高度の知識や技術が必要なむずかしい仕事だ", 0, true),
+                    new Question(6, "勤務時間中はいつも仕事のことを考えていなければならない", 0, true),
+                    new Question(7, "からだを大変よく使う仕事だ", 0, true),
+                    new Question(8, "自分のペースで仕事ができる", 0, false),
+                    new Question(9, "自分で仕事の順番・やり方を決めることができる", 0, false),
+                    new Question(10, "職場の仕事の方針に自分の意見を反映できる", 0, false),
+                    new Question(11, "自分の技能や知識を仕事で使うことが少ない", 0, true),
+                    new Question(12, "私の部署内で意見のくい違いがある", 0, true),
+                    new Question(13, "私の部署と他の部署とはうまが合わない", 0, true),
+                    new Question(14, "私の職場の雰囲気は友好的である", 0, false),
+                    new Question(15, "私の職場の作業環境（騒音、照明、温度、換気など）はよくない", 0, true),
+                    new Question(16, "仕事の内容は自分にあっている", 0, false),
+                    new Question(17, "働きがいのある仕事だ",  0, false)
+                }
             };
 
             Section sectionB = new Section("B", "最近 1 か月間のあなたの状態についてうかがいます。最もあてはまる選択ボタンを選んでください。")
