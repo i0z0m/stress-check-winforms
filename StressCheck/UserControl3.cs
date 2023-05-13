@@ -62,10 +62,10 @@ namespace StressCheck
             // currentQuestionを初期化
             currentQuestion = questionList[currentQuestionIndex];
 
-            LoadQuestion(sender, e);
+            showQuestion(sender, e);
         }
 
-        private void LoadQuestion(object sender, EventArgs e)
+        private void showQuestion(object sender, EventArgs e)
         {
             // 問題文ラベルのTextプロパティに、現在表示中の問題の問題文を代入する
             labelSection.Text = currentSection.Name;
@@ -97,7 +97,7 @@ namespace StressCheck
 
                     // 次のセクションの最初の問題に移る前に画面遷移する
 //                    Console.WriteLine("currentSection before transition: " + currentSection.Name); // テスト
-//                    NavigationHelper.NavigateTo<UserControl2>(currentSection);
+                    NavigationHelper.NavigateTo<UserControl2>(currentSection);
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace StressCheck
             }
             // 次の問題を表示する
             currentQuestion = currentSection.Questions[currentQuestionIndex];
-            LoadQuestion(sender, e);
+            showQuestion(sender, e);
         }
 
         private void buttonChoice1_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace StressCheck
 
             // 問題を表示
             currentQuestion = currentSection.Questions[currentQuestionIndex];
-            LoadQuestion(sender, e);
+            showQuestion(sender, e);
         }
 
 
