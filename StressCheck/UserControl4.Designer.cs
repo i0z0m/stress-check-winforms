@@ -58,6 +58,7 @@
             this.Controls.Add(this.labelStressLevel);
             this.Name = "UserControl4";
             this.Size = new System.Drawing.Size(600, 400);
+            this.Load += new System.EventHandler(this.UserControl4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

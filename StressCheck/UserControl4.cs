@@ -18,8 +18,7 @@ namespace StressCheck
         {
             InitializeComponent();
         }
-
-        private void UserContro4_Loaded(object sender, EventArgs e)
+        private void UserControl4_Load(object sender, EventArgs e)
         {
             DisplayResults();
         }
