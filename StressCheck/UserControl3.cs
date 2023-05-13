@@ -34,12 +34,20 @@ namespace StressCheck
 
         private void loadQuestion(object sender, EventArgs e)
         {
+            Section sectionA = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。")
+            {
+                Choices = { "そうだ", "まあそうだ", "ややちがう", "ちがう" },
+                Questions =
+                {
+                    new Question(1, "非常にたくさんの仕事をしなければならない", 0, true),
+                    new Question(2, "時間内に仕事が処理しきれない", 0, true)
+    }
+            };
+
             // Sectionを作成
-            Section sectionA = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。");
             Section sectionB = new Section("B", "最近 1 か月間のあなたの状態についてうかがいます。最もあてはまる選択ボタンを選んでください。");
 
             // Sectionの選択肢を設定
-            sectionA.Choices = new List<string> { "そうだ", "まあそうだ", "ややちがう", "ちがう" };
             sectionB.Choices = new List<string> { "ほとんどなかった", "ときどきあった", "しばしばあった", "ほとんどいつもあった" };
 
             // sectionListにSectionを追加
@@ -50,13 +58,9 @@ namespace StressCheck
             currentSection = sectionList[currentSectionIndex];
 
             // Questionを作成
-            Question sectionA_question1 = new Question(1, "非常にたくさんの仕事をしなければならない", 0, true);
-            Question sectionA_question2 = new Question(2, "時間内に仕事が処理しきれない", 0, true);
             Question sectionB_question1 = new Question(1, "活気がわいてくる", 0, true);
 
             // SectionにQuestionを追加
-            sectionA.Questions.Add(sectionA_question1);
-            sectionA.Questions.Add(sectionA_question2);
             sectionB.Questions.Add(sectionB_question1);
 
             // sectionListに含まれるすべてのQuestionをquestionListに追加
