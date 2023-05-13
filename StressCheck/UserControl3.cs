@@ -141,5 +141,45 @@ namespace StressCheck
             buttonNext_Click(sender, e);
         }
 
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            // 現在表示中の問題のインデックスを1つ減らす
+            currentQuestionIndex--;
+
+            if (currentQuestionIndex < 0)
+            {
+                // 現在のセクションの最初の問題を表示している場合
+                currentSectionIndex--;
+
+                if (currentSectionIndex >= 0)
+                {
+                    // 前のセクションがある場合
+                    currentSection = sectionList[currentSectionIndex];
+                    labelSection.Text = currentSection.Name;
+                    currentQuestionIndex = currentSection.Questions.Count - 1;
+                }
+                else
+                {
+                    // 最初のセクションの最初の問題を表示している場合
+                    NavigationHelper.NavigateBack();
+                    return;
+                }
+            }
+
+            // 問題を表示
+            currentQuestion = currentSection.Questions[currentQuestionIndex];
+            LoadQuestion(sender, e);
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.NavigateTo<UserControl1>();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            buttonBack_Click(sender, e);
+        }
     }
 }
