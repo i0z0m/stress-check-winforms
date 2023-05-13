@@ -28,6 +28,12 @@ namespace StressCheck
 
         private void UserControl3_Load(object sender, EventArgs e)
         {
+            loadQuestion(sender, e);
+            showQuestion(sender, e);
+        }
+
+        private void loadQuestion(object sender, EventArgs e)
+        {
             // Sectionを作成
             Section sectionA = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。");
             Section sectionB = new Section("B", "最近 1 か月間のあなたの状態についてうかがいます。最もあてはまる選択ボタンを選んでください。");
@@ -61,8 +67,6 @@ namespace StressCheck
 
             // currentQuestionを初期化
             currentQuestion = questionList[currentQuestionIndex];
-
-            showQuestion(sender, e);
         }
 
         private void showQuestion(object sender, EventArgs e)
