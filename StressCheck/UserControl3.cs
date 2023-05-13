@@ -44,11 +44,14 @@ namespace StressCheck
     }
             };
 
-            // Sectionを作成
-            Section sectionB = new Section("B", "最近 1 か月間のあなたの状態についてうかがいます。最もあてはまる選択ボタンを選んでください。");
-
-            // Sectionの選択肢を設定
-            sectionB.Choices = new List<string> { "ほとんどなかった", "ときどきあった", "しばしばあった", "ほとんどいつもあった" };
+            Section sectionB = new Section("B", "最近 1 か月間のあなたの状態についてうかがいます。最もあてはまる選択ボタンを選んでください。")
+            {
+                Choices = { "ほとんどなかった", "ときどきあった", "しばしばあった", "ほとんどいつもあった" },
+                Questions =
+                {
+                    new Question(1, "活気がわいてくる", 0, true)
+                }
+            };
 
             // sectionListにSectionを追加
             sectionList.Add(sectionA);
@@ -56,12 +59,6 @@ namespace StressCheck
 
             // currentSectionを初期化
             currentSection = sectionList[currentSectionIndex];
-
-            // Questionを作成
-            Question sectionB_question1 = new Question(1, "活気がわいてくる", 0, true);
-
-            // SectionにQuestionを追加
-            sectionB.Questions.Add(sectionB_question1);
 
             // sectionListに含まれるすべてのQuestionをquestionListに追加
             foreach (Section section in sectionList)
