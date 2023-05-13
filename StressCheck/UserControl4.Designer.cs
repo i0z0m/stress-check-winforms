@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelStressDescription = new System.Windows.Forms.Label();
+            this.labelStressLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label3
+            // labelStressDescription
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "診断結果の記述";
+            this.labelStressDescription.AutoSize = true;
+            this.labelStressDescription.Location = new System.Drawing.Point(53, 105);
+            this.labelStressDescription.Name = "labelStressDescription";
+            this.labelStressDescription.Size = new System.Drawing.Size(89, 13);
+            this.labelStressDescription.TabIndex = 6;
+            this.labelStressDescription.Text = "診断結果の記述";
             // 
-            // label2
+            // labelStressLevel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "診断結果の文章";
+            this.labelStressLevel.AutoSize = true;
+            this.labelStressLevel.Location = new System.Drawing.Point(53, 59);
+            this.labelStressLevel.Name = "labelStressLevel";
+            this.labelStressLevel.Size = new System.Drawing.Size(89, 13);
+            this.labelStressLevel.TabIndex = 5;
+            this.labelStressLevel.Text = "診断結果の文章";
             // 
             // UserControl4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelStressDescription);
+            this.Controls.Add(this.labelStressLevel);
             this.Name = "UserControl4";
             this.Size = new System.Drawing.Size(425, 303);
             this.ResumeLayout(false);
@@ -65,7 +65,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelStressDescription;
+        private System.Windows.Forms.Label labelStressLevel;
     }
 }

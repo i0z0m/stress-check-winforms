@@ -11,7 +11,7 @@ namespace StressCheck
         public string Name { get; set; }
         public int Age { get; set; }
         public Gender Gender { get; set; }
-        public int StressLevel { get; set; }
+        public StressLevel StressLevel { get; set; }
     }
 
     // 列挙型のGenderクラスを定義
@@ -19,5 +19,10 @@ namespace StressCheck
     {
         MALE,
         FEMALE
+    }
+    public enum StressLevel
+    {
+        HIGH,
+        LOW
     }
 }
