@@ -67,7 +67,35 @@ namespace StressCheck
                 Choices = { "ほとんどなかった", "ときどきあった", "しばしばあった", "ほとんどいつもあった" },
                 Questions =
                 {
-                    new Question(1, "活気がわいてくる", 0, true)
+                    new Question(1, "活気がわいてくる", 0, true),
+                    new Question(2, "元気がいっぱいだ", 0, true),
+                    new Question(3, "生き生きする", 0, true),
+                    new Question(4, "怒りを感じる", 0, false),
+                    new Question(5, "内心腹立たしい", 0, false),
+                    new Question(6, "イライラしている", 0, false),
+                    new Question(7, "ひどく疲れた", 0, false),
+                    new Question(8, "へとへとだ", 0, false),
+                    new Question(9, "だるい", 0, false),
+                    new Question(10, "気がはりつめている", 0, false),
+                    new Question(11, "不安だ", 0, false),
+                    new Question(12, "落着かない", 0, false),
+                    new Question(13, "ゆううつだ", 0, false),
+                    new Question(14, "何をするのも面倒だ", 0, false),
+                    new Question(15, "物事に集中できない", 0, false),
+                    new Question(16, "気分が晴れない", 0, false),
+                    new Question(17, "仕事が手につかない", 0, false),
+                    new Question(18, "悲しいと感じる", 0, false),
+                    new Question(19, "めまいがする", 0, false),
+                    new Question(20, "体のふしぶしが痛む", 0, false),
+                    new Question(21, "頭が重かったり頭痛がする", 0, false),
+                    new Question(22, "首筋や肩がこる", 0, false),
+                    new Question(23, "腰が痛い", 0, false),
+                    new Question(24, "目が疲れる", 0, false),
+                    new Question(25, "動悸や息切れがする", 0, false),
+                    new Question(26, "胃腸の具合が悪い", 0, false),
+                    new Question(27, "食欲がない", 0, false),
+                    new Question(28, "便秘や下痢をする", 0, false),
+                    new Question(29, "よく眠れない", 0, false)
                 }
             };
 
