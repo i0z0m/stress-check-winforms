@@ -28,11 +28,11 @@ namespace StressCheck
 
         private void UserControl3_Load(object sender, EventArgs e)
         {
-            loadQuestion(sender, e);
-            showQuestion(sender, e);
+            loadQuestions(sender, e);
+            displayQuestions(sender, e);
         }
 
-        private void loadQuestion(object sender, EventArgs e)
+        private void loadQuestions(object sender, EventArgs e)
         {
             Section sectionA = new Section("A", "あなたの仕事についてうかがいます。最もあてはまる選択ボタンを選んでください。")
             {
@@ -70,7 +70,7 @@ namespace StressCheck
             currentQuestion = questionList[currentQuestionIndex];
         }
 
-        private void showQuestion(object sender, EventArgs e)
+        private void displayQuestions(object sender, EventArgs e)
         {
             // 問題文ラベルのTextプロパティに、現在表示中の問題の問題文を代入する
             labelSection.Text = currentSection.Name;
@@ -113,7 +113,7 @@ namespace StressCheck
             }
             // 次の問題を表示する
             currentQuestion = currentSection.Questions[currentQuestionIndex];
-            showQuestion(sender, e);
+            displayQuestions(sender, e);
         }
 
         private void buttonChoice1_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace StressCheck
 
             // 問題を表示
             currentQuestion = currentSection.Questions[currentQuestionIndex];
-            showQuestion(sender, e);
+            displayQuestions(sender, e);
         }
 
 
