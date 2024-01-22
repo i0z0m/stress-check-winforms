@@ -1,1 +1,1 @@
-# StressCheck-DiCEJAPAN
+# stress-check-windows-forms
