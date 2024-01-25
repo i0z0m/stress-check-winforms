@@ -23,7 +23,7 @@ namespace StressCheck
 
             if (previousControl != null)
             {
-                NavigationData[previousControl.GetType()] = previousControl.Tag;
+                SaveNavigationData(previousControl);
                 parentControl.Controls.Remove(previousControl);
             }
 
@@ -64,6 +64,7 @@ namespace StressCheck
 
             return null;
         }
+
         private static Panel GetMainPanel()
         {
             var mainForm = Application.OpenForms[0] as mainForm;
@@ -89,6 +90,12 @@ namespace StressCheck
             control.Dock = DockStyle.Fill;
             control.Tag = data;
             return control;
+        }
+
+        private static void SaveNavigationData(Control control)
+        {
+            var controlType = control.GetType();
+            NavigationData[controlType] = control.Tag;
         }
     }
 }
